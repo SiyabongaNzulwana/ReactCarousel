@@ -23091,9 +23091,11 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 
 
 
+// import nextArrow from './NextArrow';
+// import prevArrow from './PrevArrow';
 
-var App = function (_React$Component) {
-  _inherits(App, _React$Component);
+var App = function (_Component) {
+  _inherits(App, _Component);
 
   function App() {
     _classCallCheck(this, App);
@@ -23113,104 +23115,164 @@ var App = function (_React$Component) {
         speed: 500,
         slidesToShow: 1,
         slidesToScroll: 1,
-        initialSlide: 2,
-        autoplay: true
-      }, _defineProperty(_settings, "speed", 2000), _defineProperty(_settings, "autoplaySpeed", 2000), _defineProperty(_settings, "cssEase", "linear"), _settings);
-      return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-        __WEBPACK_IMPORTED_MODULE_1_react_slick___default.a,
-        Object.assign({}, settings, {
+        nextArrow: __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(SampleNextArrow, {
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 22
+            lineNumber: 16
           },
           __self: this
         }),
-        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-          "div",
-          {
-            __source: {
-              fileName: _jsxFileName,
-              lineNumber: 23
-            },
-            __self: this
+        prevArrow: __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(SamplePrevArrow, {
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 17
           },
-          __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("img", { src: "https://ihatetomatoes.net/demos/_rw/01-real-estate/tn_property01.jpg", __source: {
-              fileName: _jsxFileName,
-              lineNumber: 24
-            },
-            __self: this
-          })
-        ),
-        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-          "div",
-          {
-            __source: {
-              fileName: _jsxFileName,
-              lineNumber: 26
-            },
-            __self: this
+          __self: this
+        }),
+        initialSlide: 2,
+        autoplay: false
+      }, _defineProperty(_settings, "speed", 2000), _defineProperty(_settings, "autoplaySpeed", 2000), _defineProperty(_settings, "cssEase", "linear"), _settings);
+
+      var style = {};
+      return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+        "div",
+        {
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 29
           },
-          __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("img", { src: "https://ihatetomatoes.net/demos/_rw/01-real-estate/tn_property02.jpg", __source: {
-              fileName: _jsxFileName,
-              lineNumber: 27
-            },
-            __self: this
-          })
-        ),
+          __self: this
+        },
         __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-          "div",
-          {
+          __WEBPACK_IMPORTED_MODULE_1_react_slick___default.a,
+          Object.assign({}, settings, {
             __source: {
-              fileName: _jsxFileName,
-              lineNumber: 29
-            },
-            __self: this
-          },
-          __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("img", { src: "https://ihatetomatoes.net/demos/_rw/01-real-estate/tn_property03.jpg", __source: {
               fileName: _jsxFileName,
               lineNumber: 30
             },
             __self: this
-          })
-        ),
-        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-          "div",
-          {
-            __source: {
-              fileName: _jsxFileName,
-              lineNumber: 32
+          }),
+          __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+            "div",
+            {
+              __source: {
+                fileName: _jsxFileName,
+                lineNumber: 31
+              },
+              __self: this
             },
-            __self: this
-          },
-          __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("img", { src: "https://ihatetomatoes.net/demos/_rw/01-real-estate/tn_property04.jpg", __source: {
-              fileName: _jsxFileName,
-              lineNumber: 33
+            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("img", { className: "image", src: "https://ihatetomatoes.net/demos/_rw/01-real-estate/tn_property01.jpg", __source: {
+                fileName: _jsxFileName,
+                lineNumber: 32
+              },
+              __self: this
+            })
+          ),
+          __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+            "div",
+            {
+              __source: {
+                fileName: _jsxFileName,
+                lineNumber: 34
+              },
+              __self: this
             },
-            __self: this
-          })
-        ),
-        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-          "div",
-          {
-            __source: {
-              fileName: _jsxFileName,
-              lineNumber: 35
+            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("img", { className: "image", src: "https://ihatetomatoes.net/demos/_rw/01-real-estate/tn_property02.jpg", __source: {
+                fileName: _jsxFileName,
+                lineNumber: 35
+              },
+              __self: this
+            })
+          ),
+          __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+            "div",
+            {
+              __source: {
+                fileName: _jsxFileName,
+                lineNumber: 37
+              },
+              __self: this
             },
-            __self: this
-          },
-          __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("img", { src: "https://ihatetomatoes.net/demos/_rw/01-real-estate/tn_property05.jpg", __source: {
-              fileName: _jsxFileName,
-              lineNumber: 36
+            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("img", { className: "image", src: "https://ihatetomatoes.net/demos/_rw/01-real-estate/tn_property03.jpg", __source: {
+                fileName: _jsxFileName,
+                lineNumber: 38
+              },
+              __self: this
+            })
+          ),
+          __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+            "div",
+            {
+              __source: {
+                fileName: _jsxFileName,
+                lineNumber: 40
+              },
+              __self: this
             },
-            __self: this
-          })
+            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("img", { className: "image", src: "https://ihatetomatoes.net/demos/_rw/01-real-estate/tn_property04.jpg", __source: {
+                fileName: _jsxFileName,
+                lineNumber: 41
+              },
+              __self: this
+            })
+          ),
+          __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+            "div",
+            {
+              __source: {
+                fileName: _jsxFileName,
+                lineNumber: 43
+              },
+              __self: this
+            },
+            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("img", { className: "image", src: "https://ihatetomatoes.net/demos/_rw/01-real-estate/tn_property05.jpg", __source: {
+                fileName: _jsxFileName,
+                lineNumber: 44
+              },
+              __self: this
+            })
+          )
         )
       );
     }
   }]);
 
   return App;
-}(__WEBPACK_IMPORTED_MODULE_0_react___default.a.Component);
+}(__WEBPACK_IMPORTED_MODULE_0_react__["Component"]);
+
+function SampleNextArrow(props) {
+  var className = props.className,
+      style = props.style,
+      onClick = props.onClick;
+
+  return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div", {
+    className: className,
+    style: Object.assign({}, style, { display: "block", background: "red" }),
+    onClick: onClick,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 55
+    },
+    __self: this
+  });
+}
+
+function SamplePrevArrow(props) {
+  var className = props.className,
+      style = props.style,
+      onClick = props.onClick;
+
+  return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div", {
+    className: className,
+    style: Object.assign({}, style, { display: "block", background: "green" }),
+    onClick: onClick,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 66
+    },
+    __self: this
+  });
+}
 
 /* harmony default export */ __webpack_exports__["a"] = (App);
 
@@ -26578,4 +26640,4 @@ module.exports = QueryHandler;
 
 /***/ })
 /******/ ]);
-//# sourceMappingURL=bundle.js.map
+//# sourceMappingURL=bundle.js.mapsourceMappingURL=bundle.js.map

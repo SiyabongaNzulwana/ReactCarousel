@@ -4,12 +4,18 @@ import "./App.css";
 
 class App extends React.Component {
   render() {
-    var settings = {
+    let settings = {
       dots: true,
+      lazyLoad: true,
       infinite: true,
       speed: 500,
       slidesToShow: 1,
-      slidesToScroll: 1
+      slidesToScroll: 1,
+      initialSlide: 2,
+      autoplay: true,
+      speed: 2000,
+      autoplaySpeed: 2000,
+      cssEase: "linear"
     };
     return (
 

@@ -41521,6 +41521,8 @@ var _jsxFileName = "/Users/siyabonga/Documents/react-carousel/src/shared/App.js"
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
@@ -41543,54 +41545,27 @@ var App = function (_React$Component) {
   _createClass(App, [{
     key: "render",
     value: function render() {
-      var settings = {
+      var _settings;
+
+      var settings = (_settings = {
         dots: true,
+        lazyLoad: true,
         infinite: true,
         speed: 500,
         slidesToShow: 1,
-        slidesToScroll: 1
-      };
+        slidesToScroll: 1,
+        initialSlide: 2,
+        autoplay: true
+      }, _defineProperty(_settings, "speed", 2000), _defineProperty(_settings, "autoplaySpeed", 2000), _defineProperty(_settings, "cssEase", "linear"), _settings);
       return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
         __WEBPACK_IMPORTED_MODULE_1_react_slick___default.a,
         Object.assign({}, settings, {
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 16
+            lineNumber: 22
           },
           __self: this
         }),
-        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-          "div",
-          {
-            __source: {
-              fileName: _jsxFileName,
-              lineNumber: 17
-            },
-            __self: this
-          },
-          __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("img", { src: "https://ihatetomatoes.net/demos/_rw/01-real-estate/tn_property01.jpg", __source: {
-              fileName: _jsxFileName,
-              lineNumber: 18
-            },
-            __self: this
-          })
-        ),
-        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-          "div",
-          {
-            __source: {
-              fileName: _jsxFileName,
-              lineNumber: 20
-            },
-            __self: this
-          },
-          __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("img", { src: "https://ihatetomatoes.net/demos/_rw/01-real-estate/tn_property02.jpg", __source: {
-              fileName: _jsxFileName,
-              lineNumber: 21
-            },
-            __self: this
-          })
-        ),
         __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
           "div",
           {
@@ -41600,7 +41575,7 @@ var App = function (_React$Component) {
             },
             __self: this
           },
-          __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("img", { src: "https://ihatetomatoes.net/demos/_rw/01-real-estate/tn_property03.jpg", __source: {
+          __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("img", { src: "https://ihatetomatoes.net/demos/_rw/01-real-estate/tn_property01.jpg", __source: {
               fileName: _jsxFileName,
               lineNumber: 24
             },
@@ -41616,7 +41591,7 @@ var App = function (_React$Component) {
             },
             __self: this
           },
-          __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("img", { src: "https://ihatetomatoes.net/demos/_rw/01-real-estate/tn_property04.jpg", __source: {
+          __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("img", { src: "https://ihatetomatoes.net/demos/_rw/01-real-estate/tn_property02.jpg", __source: {
               fileName: _jsxFileName,
               lineNumber: 27
             },
@@ -41632,9 +41607,41 @@ var App = function (_React$Component) {
             },
             __self: this
           },
-          __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("img", { src: "https://ihatetomatoes.net/demos/_rw/01-real-estate/tn_property05.jpg", __source: {
+          __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("img", { src: "https://ihatetomatoes.net/demos/_rw/01-real-estate/tn_property03.jpg", __source: {
               fileName: _jsxFileName,
               lineNumber: 30
+            },
+            __self: this
+          })
+        ),
+        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+          "div",
+          {
+            __source: {
+              fileName: _jsxFileName,
+              lineNumber: 32
+            },
+            __self: this
+          },
+          __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("img", { src: "https://ihatetomatoes.net/demos/_rw/01-real-estate/tn_property04.jpg", __source: {
+              fileName: _jsxFileName,
+              lineNumber: 33
+            },
+            __self: this
+          })
+        ),
+        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+          "div",
+          {
+            __source: {
+              fileName: _jsxFileName,
+              lineNumber: 35
+            },
+            __self: this
+          },
+          __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("img", { src: "https://ihatetomatoes.net/demos/_rw/01-real-estate/tn_property05.jpg", __source: {
+              fileName: _jsxFileName,
+              lineNumber: 36
             },
             __self: this
           })

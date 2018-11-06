@@ -63,5 +63,11 @@ body {
     outline: 0;
     background: 0 0;
   }
+  .slick-arrow slick-next{
+    height: 20%;
+  }
+  .slick-next {
+    right: 335px !important;
+}
 
 /*# sourceMappingURL=main.css.map*/

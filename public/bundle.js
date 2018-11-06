@@ -23100,13 +23100,20 @@ var App = function (_Component) {
   function App() {
     _classCallCheck(this, App);
 
-    return _possibleConstructorReturn(this, (App.__proto__ || Object.getPrototypeOf(App)).apply(this, arguments));
+    var _this = _possibleConstructorReturn(this, (App.__proto__ || Object.getPrototypeOf(App)).call(this));
+
+    _this.state = {
+      activeSlide: 0,
+      images: [{ src: "https://ihatetomatoes.net/demos/_rw/01-real-estate/tn_property01.jpg", alt: "....", className: "image" }, { src: "https://ihatetomatoes.net/demos/_rw/01-real-estate/tn_property02.jpg", alt: "....", className: "image" }, { src: "https://ihatetomatoes.net/demos/_rw/01-real-estate/tn_property03.jpg", alt: "....", className: "image" }, { src: "https://ihatetomatoes.net/demos/_rw/01-real-estate/tn_property04.jpg", alt: "....", className: "image" }, { src: "https://ihatetomatoes.net/demos/_rw/01-real-estate/tn_property05.jpg", alt: "....", className: "image" }]
+    };
+    return _this;
   }
 
   _createClass(App, [{
     key: "render",
     value: function render() {
-      var _settings;
+      var _settings,
+          _this2 = this;
 
       var settings = (_settings = {
         dots: true,
@@ -23118,14 +23125,14 @@ var App = function (_Component) {
         nextArrow: __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(SampleNextArrow, {
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 16
+            lineNumber: 29
           },
           __self: this
         }),
         prevArrow: __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(SamplePrevArrow, {
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 17
+            lineNumber: 30
           },
           __self: this
         }),
@@ -23133,13 +23140,16 @@ var App = function (_Component) {
         autoplay: false
       }, _defineProperty(_settings, "speed", 2000), _defineProperty(_settings, "autoplaySpeed", 2000), _defineProperty(_settings, "cssEase", "linear"), _settings);
 
-      var style = {};
+      var imageClick = function imageClick() {
+        console.log('Click');
+      };
+
       return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
         "div",
         {
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 29
+            lineNumber: 43
           },
           __self: this
         },
@@ -23148,90 +23158,27 @@ var App = function (_Component) {
           Object.assign({}, settings, {
             __source: {
               fileName: _jsxFileName,
-              lineNumber: 30
+              lineNumber: 44
             },
             __self: this
           }),
-          __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-            "div",
-            {
-              __source: {
-                fileName: _jsxFileName,
-                lineNumber: 31
+          this.state.images.map(function (image, index) {
+            return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+              "div",
+              { key: index, __source: {
+                  fileName: _jsxFileName,
+                  lineNumber: 47
+                },
+                __self: _this2
               },
-              __self: this
-            },
-            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("img", { className: "image", src: "https://ihatetomatoes.net/demos/_rw/01-real-estate/tn_property01.jpg", __source: {
-                fileName: _jsxFileName,
-                lineNumber: 32
-              },
-              __self: this
-            })
-          ),
-          __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-            "div",
-            {
-              __source: {
-                fileName: _jsxFileName,
-                lineNumber: 34
-              },
-              __self: this
-            },
-            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("img", { className: "image", src: "https://ihatetomatoes.net/demos/_rw/01-real-estate/tn_property02.jpg", __source: {
-                fileName: _jsxFileName,
-                lineNumber: 35
-              },
-              __self: this
-            })
-          ),
-          __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-            "div",
-            {
-              __source: {
-                fileName: _jsxFileName,
-                lineNumber: 37
-              },
-              __self: this
-            },
-            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("img", { className: "image", src: "https://ihatetomatoes.net/demos/_rw/01-real-estate/tn_property03.jpg", __source: {
-                fileName: _jsxFileName,
-                lineNumber: 38
-              },
-              __self: this
-            })
-          ),
-          __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-            "div",
-            {
-              __source: {
-                fileName: _jsxFileName,
-                lineNumber: 40
-              },
-              __self: this
-            },
-            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("img", { className: "image", src: "https://ihatetomatoes.net/demos/_rw/01-real-estate/tn_property04.jpg", __source: {
-                fileName: _jsxFileName,
-                lineNumber: 41
-              },
-              __self: this
-            })
-          ),
-          __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-            "div",
-            {
-              __source: {
-                fileName: _jsxFileName,
-                lineNumber: 43
-              },
-              __self: this
-            },
-            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("img", { className: "image", src: "https://ihatetomatoes.net/demos/_rw/01-real-estate/tn_property05.jpg", __source: {
-                fileName: _jsxFileName,
-                lineNumber: 44
-              },
-              __self: this
-            })
-          )
+              __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("img", { className: image.className, src: image.src, __source: {
+                  fileName: _jsxFileName,
+                  lineNumber: 48
+                },
+                __self: _this2
+              })
+            );
+          })
         )
       );
     }
@@ -23247,11 +23194,11 @@ function SampleNextArrow(props) {
 
   return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div", {
     className: className,
-    style: Object.assign({}, style, { display: "block", background: "red" }),
+    style: Object.assign({}, style, { display: "block", background: "red", fontSize: '40px' }),
     onClick: onClick,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 55
+      lineNumber: 61
     },
     __self: this
   });
@@ -23264,11 +23211,11 @@ function SamplePrevArrow(props) {
 
   return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div", {
     className: className,
-    style: Object.assign({}, style, { display: "block", background: "green" }),
+    style: Object.assign({}, style, { display: "block", background: "green", fontSize: '40px' }),
     onClick: onClick,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 66
+      lineNumber: 72
     },
     __self: this
   });
@@ -26640,4 +26587,4 @@ module.exports = QueryHandler;
 
 /***/ })
 /******/ ]);
-//# sourceMappingURL=bundle.js.mapsourceMappingURL=bundle.js.map
+//# sourceMappingURL=bundle.js.mape.js.map

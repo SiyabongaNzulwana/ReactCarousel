@@ -5,6 +5,19 @@ import "./App.css";
 // import prevArrow from './PrevArrow';
 
 class App extends Component {
+  constructor() {
+    super();
+    this.state = {
+      activeSlide: 0,
+      images: [
+        { src: "https://ihatetomatoes.net/demos/_rw/01-real-estate/tn_property01.jpg", alt: "....", className: "image" },
+        { src: "https://ihatetomatoes.net/demos/_rw/01-real-estate/tn_property02.jpg", alt: "....", className: "image" },
+        { src: "https://ihatetomatoes.net/demos/_rw/01-real-estate/tn_property03.jpg", alt: "....", className: "image" },
+        { src: "https://ihatetomatoes.net/demos/_rw/01-real-estate/tn_property04.jpg", alt: "....", className: "image" },
+        { src: "https://ihatetomatoes.net/demos/_rw/01-real-estate/tn_property05.jpg", alt: "....", className: "image" }
+      ]
+    };
+  }
   render() {
     let settings = {
       dots: true,
@@ -22,27 +35,20 @@ class App extends Component {
       cssEase: "linear"
     };
 
-    const style = {
+    const imageClick = () => {
+      console.log('Click');
+    } 
 
-    }
     return (
       <div>
         <Slider {...settings}>
-          <div>
-            <img className="image" src="https://ihatetomatoes.net/demos/_rw/01-real-estate/tn_property01.jpg" />
-          </div>
-          <div>
-            <img className="image" src="https://ihatetomatoes.net/demos/_rw/01-real-estate/tn_property02.jpg" />
-          </div>
-          <div>
-            <img className="image" src="https://ihatetomatoes.net/demos/_rw/01-real-estate/tn_property03.jpg" />
-          </div>
-          <div>
-            <img className="image" src="https://ihatetomatoes.net/demos/_rw/01-real-estate/tn_property04.jpg" />
-          </div>
-          <div>
-            <img className="image" src="https://ihatetomatoes.net/demos/_rw/01-real-estate/tn_property05.jpg" />
-          </div>
+        {this.state.images.map((image, index) => {
+          return (
+            <div key={index}>
+              <img className={image.className} src={image.src} />
+            </div>
+          );
+        })}
         </Slider>
       </div>
     );
@@ -54,7 +60,7 @@ function SampleNextArrow(props) {
   return (
     <div
       className={className}
-      style={{ ...style, display: "block", background: "red" }}
+      style={{ ...style, display: "block", background: "red", fontSize: '40px' }}
       onClick={onClick}
     />
   );
@@ -65,12 +71,10 @@ function SamplePrevArrow(props) {
   return (
     <div
       className={className}
-      style={{ ...style, display: "block", background: "green" }}
+      style={{ ...style, display: "block", background: "green", fontSize: '40px' }}
       onClick={onClick}
     />
   );
 }
 
 export default App;
-
-
